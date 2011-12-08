@@ -1,0 +1,17 @@
+Simple student database using shared memory.
+
+A makefile is provided.
+	Since "clean" is standard for removing files made by the makefile, the 
+	step for building the "clean" program has been named cleanup, and a 
+	PHONY rule has been added to get the clean step to remove files.
+
+	Other than that step, all the others are straight forward.  Running
+	"make load" for instance, will build the load program by itself.
+	Running "make all" or just "make" will all 5 programs.
+
+The load program expects an input file to be provided.  It will complain 
+	and abort if you do not provide one when running it.
+
+The clean program also expects a filename, to know where to save the 
+	database.  It will default to "rnolan_database.dat" if you do not
+	provide one, however.

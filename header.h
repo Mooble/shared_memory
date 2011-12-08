@@ -26,6 +26,6 @@ struct student{
 void Wait(int semaph, int n);
 void Signal(int semaph, int n);
 int GetSemaphs(key_t k, int n);
-void read_line(char* line, int size);
+void read_line(char* line, int size, FILE* read_from);
 
 #endif

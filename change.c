@@ -46,21 +46,18 @@ int main(){
 
 	//Prompt the user for password;
 	printf("Please enter the password %d: ", sizeof(line));
-	read_line(line,sizeof(line));
+	read_line(line,sizeof(line),stdin);
 
 	//Validate the password - just check if the user types 000;
 	if( strcmp(line,PASSWORD) == 0 ){
 		//Get the id of the student the user wants to modify;
-		student_id = 0;
-		while(student_id == 0){
-			printf("Please enter id of student: ");
-			fgets(line,sizeof(line),stdin);
-			student_id = atoi(line);
-		}
+		printf("Please enter id of student: ");
+		fgets(line,sizeof(line),stdin);
+		student_id = atoi(line);
 
 		//Get the new information about the student;
 		printf("Please enter new name: ");
-		read_line(new_name,sizeof(new_name));
+		read_line(new_name,sizeof(new_name),stdin);
 		
 		printf("Please enter new address: ");
 		read_line(new_addr,sizeof(new_addr),stdin);

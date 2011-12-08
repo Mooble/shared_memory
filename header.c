@@ -35,8 +35,9 @@ int GetSemaphs(key_t k, int n)
   return semid;
 }
 
-void read_line(char* line, int size){
-	if ( fgets(line, size, stdin) ){
+void read_line(char* line, int size, FILE* read_from){
+	strcpy(line,"");
+	if ( fgets(line, size, read_from) ){
 		char *newline = strchr(line, '\n'); /* check for trailing '\n' */
 		if ( newline )	{
 			*newline = '\0'; /* overwrite the '\n' with a terminating null */
